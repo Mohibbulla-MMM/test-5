@@ -76,36 +76,45 @@ function titleCreate(id) {
   let titleIdValue = titleId.innerText;
   let h2 = document.createElement("h2");
   h2.classList.add("font-medium", "mb-2");
-  
+  h2.innerText = `${chaildCounter + 1}. ${titleIdValue}`;
+  cardTitle.appendChild(h2);
 }
 // ========== card 1 ==============
 
 document.getElementById("card-1").addEventListener("click", function () {
   const productConvert = priceConveter("card-price-1");
+  titleCreate("card-title-1");
   totalPriceSet(productConvert);
 });
+
 // ========== card 2 ==============
 document.getElementById("card-2").addEventListener("click", function () {
   const productConvert = priceConveter("card-price-2");
+  titleCreate("card-title-2");
   totalPriceSet(productConvert);
 });
+
 // ========== card 3 ==============
 document.getElementById("card-3").addEventListener("click", function () {
   const productConvert = priceConveter("card-price-3");
+  titleCreate("card-title-3");
   totalPriceSet(productConvert);
 });
 // ========== card 4 ==============
 document.getElementById("card-4").addEventListener("click", function () {
   const productConvert = priceConveter("card-price-4");
+  titleCreate("card-title-4");
   totalPriceSet(productConvert);
 });
 // ========== card 5 ==============
 document.getElementById("card-5").addEventListener("click", function () {
   const productConvert = priceConveter("card-price-5");
+  titleCreate("card-title-5");
   totalPriceSet(productConvert);
 });
 // ========== card 6 ==============
 document.getElementById("card-6").addEventListener("click", function () {
   const productConvert = priceConveter("card-price-6");
+  titleCreate("card-title-6");
   totalPriceSet(productConvert);
 });
