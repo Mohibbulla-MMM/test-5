@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>assignment 5 </title>
+
+    <!-- daisyui link taild css link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    background: {
+                        mmbg: "red"
+                        // mmbg: "#F9F6E2"
+                    }
+
+                    //  '#F9F6E2',
+
+
+
+                }
+            }
+        }
+    </script>
+    <style>
+        .mm-text-color {
+            color: #E527B2;
+        }
+
+        .mm-bg-color {
+            background-color: #E527B2;
+        }
+
+
+
+        .deactive {
+            opacity: 0.6;
+            animation-duration: 1s;
+            animation-name: m-deactive;
+        }
+
+        @keyframes m-deactive {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.6;
+            }
+        }
+
+        .active {
+            animation-duration: 1s;
+            animation-name: m-active;
+        }
+
+        @keyframes m-active {
+            0% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-200 text-black">
+    <!-- ---------------------------------- site header  -------------------------- -->
+    <header class=" bg-[#F9F6E2] ">
+
+        <div class="container flex items-center justify-center md:flex-row flex-col mx-auto md:py-10 py-6 px-3 ">
+            <!-- hero left col -->
+            <div class="flex flex-col md:gap-8  gap-4 items-center flex-1 ">
+                <h3 class="md:text-2xl text-lg  font-medium uppercase">---SALE FEVER---</h3>
+                <!-- desktop title  -->
+                <h3 class=" md:block hidden max-w-[500px] md:text-5xl sm:text-4xl text-3xl font-bold ">
+                    Purchase TK 200 or above & get
+                    <span class="mm-text-color">20% off</span>
+                </h3>
+                <!-- mobaile title  -->
+                <h3 class=" block md:hidden max-w-[500px] md:text-5xl sm:text-4xl text-3xl font-bold ">
+                    Purchase TK 200 or <br> above & get
+                    <span class="mm-text-color">20% off</span>
+                </h3>
+
+                <div class="flex items-center justify-center gap-3 text-lg">
+                    <p class="">Use Promo Code</p>
+                    <!-- -----------romo code button ------------->
+                    <button id=""
+                        class=" py-2 px-7 rounded-md text-white text-lg mm-bg-color border-0 outline-0 ">SELL200</button>
+                </div>
+            </div><!-- hero left col-->
+
+            <!-- hero left col -->
+            <div class=" flex-1    ">
+                <figure class="flex items-center justify-center">
+                    <img class="inline-block " src="assets/image/Summer 1.png" alt="">
+                </figure>
+            </div><!-- hero right col -->
+
+        </div>
+
+    </header> <!-- header end-->
+
+    <!-- ---------------------------------------------------------- -------------------------- -->
+    <!-- ---------------------------------- site main container -------------------------- -->
+    <!-- -------------------------------------------------------------------------------------- -->
+    <main class="container mx-auto px-3 ">
+
+        <div class=" grid grid-cols-12  gap-3  md:mt-20 sm:mt-16 mt-12">
+
+            <div class="lg:col-span-9  md:col-span-8 sm:col-span-6 col-span-12 items-center justify-items-center">
+                <!-- ===================================== cart one box======================================== -->
+                <h1 class="text-4xl font-medium my-4">Kitchenware</h1>
+                <div class="grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1  gap-6  mt-5">
+
+                    <!-- ----------------- --------------- Kitchenware card 1---------- ---------------- -->
+                    <div id="card-1"
+                        class="flex justify-center items-center gap-3 flex-col bg-white p-3 rounded-xl hover:cursor-pointer ">
+                        <figure class="bg-zinc-200 rounded-lg w-full flex items-center justify-center p-4  ">
+                            <img class="" src="assets/image/prod1.png" alt="">
+                        </figure><!-- card  image-->
+
+                        <!-----------------------ratting ------------------->
+                        <div class="rating rating-sm mt-2">
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                        </div> <!--rating container-->
+                        <h4 class="text-lg font-medium">A. Accessories</h4>
+                        <!------------------------- card price ----------------------- -->
+                        <p class=" text-gray-500 font-medium">
+                            <span id="card-price-1">39.00 </span>
+                            <span>TK </span>
+                        </p>
+                    </div><!-- card 1-->
+
+                    <!-- ----------------- --------------- Kitchenware card 2---------- ---------------- -->
+                    <div id="card-2" class="flex justify-center items-center gap-3 flex-col bg-white p-3 rounded-xl  ">
+                        <figure class="bg-zinc-200 rounded-lg w-full flex items-center justify-center p-4  ">
+                            <img src="assets/image/prod2.png" alt="">
+                        </figure><!-- card  image-->
+
+                        <!---------ratting ---------->
+                        <div class="rating rating-sm mt-2">
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                        </div> <!--rating container-->
+                        <h4 class="text-lg font-medium">K. Accessories</h4>
+                        <!------------------------- card price ----------------------- -->
+                        <p class=" text-gray-500 font-medium"><span id="card-price-2">25.00 </span> <span>TK </span></p>
+                    </div><!-- card 2 -->
+
+                    <!-- ----------------- --------------- Kitchenware card 3---------- ---------------- -->
+                    <div id="card-3" class="flex justify-center items-center gap-3 flex-col bg-white p-3 rounded-xl  ">
+                        <figure class="bg-zinc-200 rounded-lg w-full flex items-center justify-center p-4  ">
+                            <img src="assets/image/prod3.png" alt="">
+                        </figure><!-- card  image-->
+
+                        <!-----------------------ratting ------------------->
+                        <div class="rating rating-sm mt-2">
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                        </div> <!--rating container-->
+                        <h4 class="text-lg font-medium">Home Cooker</h4>
+                        <!------------------------- card price ----------------------- -->
+                        <p class=" text-gray-500 font-medium"><span id="card-price-3">49.56350 </span> <span>TK </span>
+                        </p>
+                    </div><!-- card 3 -->
+
+                </div><!-- card box -->
+
+                <!-- ===================================== cart two box======================================== -->
+                <h1 class="text-4xl font-medium mt-10 my-4">Sportswear</h1>
+                <div class="grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1  gap-6   mt-5">
+                    <!-- ----------------- --------------- Kitchenware card 1---------- ---------------- -->
+                    <div id="card-4" class="flex justify-center items-center gap-3 flex-col bg-white p-3 rounded-xl  ">
+                        <figure class="bg-zinc-200 rounded-lg w-full flex items-center justify-center p-4  ">
+                            <img src="assets/image/prod4.png" alt="">
+                        </figure><!-- card  image-->
+
+                        <!-----------------------ratting ------------------->
+                        <div class="rating rating-sm mt-2">
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                        </div> <!--rating container-->
+                        <h4 class="text-lg font-medium">Sports Back Cap</h4>
+                        <!------------------------- card price ----------------------- -->
+                        <p class=" text-gray-500 font-medium">
+                            <span id="card-price-4">49.00 </span>
+                            <span>TK </span>
+                        </p>
+                    </div><!-- card 4-->
+
+                    <!-- ----------------- --------------- Kitchenware card 2---------- ---------------- -->
+                    <div id="card-5" class="flex justify-center items-center gap-3 flex-col bg-white p-3 rounded-xl  ">
+                        <figure class="bg-zinc-200 rounded-lg w-full flex items-center justify-center p-4  ">
+                            <img src="assets/image/prod5.png" alt="">
+                        </figure><!-- card  image-->
+
+                        <!---------ratting ---------->
+                        <div class="rating rating-sm mt-2">
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                        </div> <!--rating container-->
+                        <h4 class="text-lg font-medium">Full Jersey Set</h4>
+                        <!------------------------- card price ----------------------- -->
+                        <p class=" text-gray-500 font-medium">
+                            <span id="card-price-5">69.00 </span>
+                            <span>TK </span>
+                        </p>
+                    </div><!-- card 5 -->
+
+                    <!-- ----------------- --------------- Kitchenware card 3---------- ---------------- -->
+                    <div id="card-6" class="flex justify-center items-center gap-3 flex-col bg-white p-3 rounded-xl  ">
+                        <figure class="bg-zinc-200 rounded-lg w-full flex items-center justify-center p-4  ">
+                            <img src="assets/image/prod6.png" alt="">
+                        </figure><!-- card  image-->
+
+                        <!-----------------------ratting ------------------->
+                        <div class="rating rating-sm mt-2">
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                        </div> <!--rating container-->
+                        <h4 class="text-lg font-medium">Sports cates</h4>
+                        <!------------------------- card price ----------------------- -->
+                        <p class=" text-gray-500 font-medium">
+                            <span id="card-price-6">169.00 </span>
+                            <span>TK </span>
+                        </p>
+                    </div><!-- card 6 -->
+
+                </div><!-- card box -->
+
+            </div><!-- card main  container gird col span 3 -->
+
+            <!-- ==================================================================== ===================
+             ================= =============== calculation area ================== =================
+           ================ ================================================= ==================== -->
+            <div class=" lg:col-span-3 md:col-span-4  sm:col-span-6 col-span-12 mt-20 ">
+
+                <div class="bg-white rounded-lg  p-4 mb-5 font-medium">
+                    <h3>Have coupon?</h3>
+                    <!-- ----------------------sidebar container one apply copun ---------------------- -->
+                    <div
+                        class="grid grid-cols-12  bg-white  border-[1px] border-gray-200 mt-3  rounded-xl overflow-hidden">
+                        <!-- apply cupon input  -->
+                        <input id="cupon-input"
+                            class="outline-none col-span-7 p-2  border-0 bg-white rounded-lg font-normal" type="text"
+                            readonly placeholder="Coupon code">
+                        <!-- apply cupon button  -->
+                        <button id="cupon" disabled class=" deactive col-span-5 mm-bg-color text-white">Apply n</button>
+                    </div> <!-- apply cupon contaiern  -->
+                </div> <!-- apply cupon main container  -->
+
+
+                <!-- ----------------------sidebar container two card details ---------------------- -->
+                <div class="bg-white rounded-lg  p-4 mb-5 font-medium">
+
+                    <h3>Your shoping details</h3>
+                    <!-- ===========  user card title contaner   ====================== -->
+                    <div id="user-item-select-title" class="p-1 mt-4 border-b border-gray-300 ">
+                    </div><!-- user card title title -->
+
+                    <!-- ===========  user card price contaner   ============== -->
+                    <div id="user-item-price-parsent" class="p-1 mt-4 ">
+
+                        <div class="flex mb-2">
+                            <p>Total price: </p>
+                            <p id="total-price" class="text-gray-400"> 0</p>
+                        </div><!-- totla price-->
+
+                        <div class="flex mb-2">
+                            <p>Discount: </p>
+                            <p id="discount" class="text-gray-400"> 00.00</p>
+                        </div><!-- discount price-->
+
+                        <div class="flex">
+                            <p>Total: </p>
+                            <p id="total" class="text-gray-400"> 00.00</p>
+                        </div><!-- totla price-->
+
+                    </div><!-- user card price container-->
+
+                    <button id="card-purchase" disabled
+                        class=" w-full mm-bg-color text-white rounded-lg px-3 py-2 mt-5 deactive">
+                        Make Purchase
+                    </button>
+                </div> <!-- apply cupon main container  -->
+
+            </div><!-- calculator container area -->
+
+        </div><!-- card main container-->
+
+    </main><!-- body main container end-->
+    <!-- ---------------------------------- site footr -------------------------- -->
+
+
+    <footer class="flex justify-center mt-8 text-gray-500 bg-white py-10 px-3">
+        <p>"Copyright © 2023 Mohibbulla, All rights reserved."</p>
+    </footer><!-- footer end -->
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
