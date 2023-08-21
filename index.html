@@ -70,7 +70,20 @@
 
             100% {
                 opacity: 1;
+                /* background-color: rgba(0, 0, 0, 0.38); */
             }
+        }
+
+        /* ----------my modal code ----------- */
+        .mm-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.452);
+            z-index: 999;
+            display: none;
         }
     </style>
 </head>
@@ -314,13 +327,37 @@
                         class=" w-full mm-bg-color text-white rounded-lg px-3 py-2 mt-5 deactive">
                         Make Purchase
                     </button>
+
+
                 </div> <!-- apply cupon main container  -->
 
             </div><!-- calculator container area -->
 
         </div><!-- card main container-->
 
+
+
     </main><!-- body main container end-->
+
+
+    <!-- =================== ============================================
+========================my modal ==========================
+=========================  ========================================== -->
+    <div id="my-mm-modal" class="mm-fixed ">
+        <div class="flex items-center justify-center h-full">
+            <div class="flex flex-col gap-4 justify-center items-center
+                     bg-white w-[300px] p-4 rounded-xl ">
+                <figure>
+                    <img src="assets/image/congo.png" alt="">
+                </figure>
+                <h2 class="text-3xl font-bold "> Congratulations</h2>
+                <h2 class=" text-gray-600  "> Your Purchase the product</h2>
+                <button id="modal-btn" class="uppercase font-semibold mm-bg-color rounded-lg py-2 px-6 
+                      border-0 outline-0 text-white hover:bg-gray-700">Go Home</button>
+            </div><!-- modal content-->
+        </div><!-- modal box -->
+    </div><!-- my modal -->
+
     <!-- ---------------------------------- site footr -------------------------- -->
 
 

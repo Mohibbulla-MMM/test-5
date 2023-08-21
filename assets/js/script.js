@@ -31,7 +31,18 @@ function totalPriceButton(value) {
     cardTotalPriceButton.classList.add("deactive");
   }
 }
-// ================================cupon apply function funtion ==============================
+// ----------------------- modal show -------------------------------
+cardTotalPriceButton.addEventListener("click", function () {
+  const modal = document.getElementById("my-mm-modal");
+  modal.style.display = "block";
+});
+// ----------------------- modal hidden-------------------------------
+document.getElementById("modal-btn").addEventListener("click", function () {
+  const modal = document.getElementById("my-mm-modal");
+  modal.style.display = "none";
+  location.href = "index.html";
+});
+// ================================cupon active btn function  ==============================
 function cupon(value) {
   if (value >= 200) {
     cuponBtn.classList.add("active");
@@ -44,16 +55,15 @@ function cupon(value) {
     cuponBtn.setAttribute("disabled", true);
   }
 }
-// ======================== cupon button =========================
-// function cuponApplyBtn(value) {
+// ======================== cupon apply button =========================
 document.getElementById("cupon").addEventListener("click", function () {
   const discount = document.getElementById("discount");
   const total = document.getElementById("total");
   if (cuponInput.value === "SELL200") {
     let calculationDiscount = (totalPriceCounter / 100) * 20;
-    discount.innerText = calculationDiscount;
+    discount.innerText = calculationDiscount.toFixed(2);
     let calculationTotla = totalPriceCounter - calculationDiscount;
-    total.innerText = calculationTotla;
+    total.innerText = calculationTotla.toFixed(2);
     alert("Your cupon successfull");
   } else {
     alert("Your cupon Wrong \nwrite cupon here\nSELL200");
@@ -79,6 +89,8 @@ function titleCreate(id) {
   h2.innerText = `${chaildCounter + 1}. ${titleIdValue}`;
   cardTitle.appendChild(h2);
 }
+// ================================modal function ==========================
+
 // ========== card 1 ==============
 
 document.getElementById("card-1").addEventListener("click", function () {
